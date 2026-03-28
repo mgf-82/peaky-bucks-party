@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import ChevronIcon from './ChevronIcon';
 
 const scheduleItems = [
   {
@@ -41,7 +41,7 @@ const Schedule = () => {
     <section className="panel-card">
       <button type="button" className="panel-toggle" onClick={toggleSchedule}>
         <h2 className="panel-title">The Schedule</h2>
-        {isOpen ? <ChevronUp /> : <ChevronDown />}
+        <ChevronIcon direction={isOpen ? 'up' : 'down'} />
       </button>
       <AnimatePresence>
         {isOpen && (
