@@ -335,6 +335,51 @@ body {
     border-radius: 22px;
 }
 
+.shelby-badge {
+    width: min(100%, 260px);
+    margin: 0 auto 18px;
+}
+
+.shelby-badge svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.badge-ring,
+.badge-inner-ring {
+    fill: #f5efe4;
+    stroke: #16110d;
+    stroke-width: 8;
+}
+
+.badge-inner-ring {
+    stroke-width: 4;
+}
+
+.badge-cap,
+.badge-face,
+.badge-shadow,
+.badge-collar {
+    fill: #16110d;
+}
+
+.badge-highlight {
+    fill: #f5efe4;
+}
+
+.badge-text {
+    fill: #16110d;
+    font-family: "Cinzel", Georgia, serif;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+}
+
+.badge-text-bottom {
+    font-size: 22px;
+}
+
 .hero-topline,
 .schedule-row,
 .tier-header,
