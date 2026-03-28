@@ -4,13 +4,25 @@ import ChevronIcon from './ChevronIcon';
 
 const capOptions = [
   {
-    tier: 'Cheap',
-    name: 'Target Flat Cap',
+    tier: 'Cheap | Black',
+    name: 'Target Flat Cap - Black',
     price: 'About A$5',
     href: 'https://www.target.com.au/p/flat-cap/70047547',
   },
   {
-    tier: 'Affordable',
+    tier: 'Affordable | Grey',
+    name: 'Target Herringbone Flat Cap - Grey',
+    price: 'About A$15',
+    href: 'https://www.target.com.au/p/herringbone-flat-cap/70978094',
+  },
+  {
+    tier: 'Affordable | Black',
+    name: 'Target Mens Cotton Flat Cap - Black',
+    price: 'About A$15',
+    href: 'https://www.target.com.au/p/mens-cotton-flat-cap/71596471',
+  },
+  {
+    tier: 'Shelby | Grey',
     name: 'Target Mens Textured Flat Cap',
     price: 'About A$15',
     href: 'https://www.target.com.au/p/mens-textured-flat-cap/71597065',
@@ -22,7 +34,7 @@ const capOptions = [
     href: 'https://www.heavencostumes.com.au/products/shelby-gangster-grey-flat-cap-hat',
   },
   {
-    tier: 'Mid',
+    tier: 'Mid | Taupe-Grey',
     name: 'Avenel Finch Linen Cotton Flat Cap',
     price: 'About A$67.50',
     href: 'https://thehatstore.com.au/products/avenel-finch-linen-cotton-flat-cap-taupe',
@@ -76,25 +88,26 @@ const DressCodePanel = () => {
             transition={{ duration: 0.35 }}
           >
             <p className="dress-code-text">
-              Aim for dark layers, sharp shirt, polished shoes, and a proper flat cap on your
-              head before first drinks. If anyone asks, this is non-negotiable.
+              Keep it practical for a big day out: white shirt, black tie, trousers, and boots or
+              clean dress shoes. Jacket or waistcoat is optional, but the flat cap is
+              non-negotiable.
             </p>
             <div className="style-guide">
               <div className="style-tip">
                 <span className="style-tip-label">Top Half</span>
-                <strong>White or dark button-up, optional waistcoat, structured jacket</strong>
+                <strong>White button-up and black tie. Jacket or waistcoat is optional.</strong>
               </div>
               <div className="style-tip">
                 <span className="style-tip-label">Bottom Half</span>
-                <strong>Tailored trousers or dark chinos, no boardies, no ripped denim</strong>
+                <strong>Black or charcoal trousers. Dark chinos work if they still look sharp.</strong>
               </div>
               <div className="style-tip">
                 <span className="style-tip-label">Footwear</span>
-                <strong>Dress shoes or clean boots, polished enough for casino entry</strong>
+                <strong>Boots or clean dress shoes, comfortable enough to survive the full day.</strong>
               </div>
               <div className="style-tip">
                 <span className="style-tip-label">Non-Negotiable</span>
-                <strong>Flat cap on arrival, dark palette, look like you mean business</strong>
+                <strong>Flat cap on arrival, dark palette, and no casual gear killing the look.</strong>
               </div>
             </div>
             <div className="flat-cap-links">
