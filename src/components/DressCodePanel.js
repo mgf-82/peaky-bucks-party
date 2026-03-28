@@ -16,10 +16,22 @@ const capOptions = [
     href: 'https://www.target.com.au/p/mens-textured-flat-cap/71597065',
   },
   {
+    tier: 'Shelby',
+    name: 'Shelby Gangster Mens Grey 1920s Flat Cap',
+    price: 'About A$18.99',
+    href: 'https://www.heavencostumes.com.au/products/shelby-gangster-grey-flat-cap-hat',
+  },
+  {
     tier: 'Mid',
     name: 'Avenel Finch Linen Cotton Flat Cap',
     price: 'About A$67.50',
     href: 'https://thehatstore.com.au/products/avenel-finch-linen-cotton-flat-cap-taupe',
+  },
+  {
+    tier: 'Shelby',
+    name: 'Failsworth Linen Alfie Cap',
+    price: 'About A$95',
+    href: 'https://thehatstore.com.au/products/failsworth-linen-alfie-cap-natural',
   },
   {
     tier: 'Sharp',
@@ -43,10 +55,10 @@ const DressCodePanel = () => {
       <button type="button" className="dress-code-toggle" onClick={() => setIsOpen(!isOpen)}>
         <div className="dress-code-copy">
           <p className="closing-eyebrow">Wardrobe Order</p>
-          <h2 className="dress-code-title">Dress Code: Peaky Blinders Style</h2>
+          <h2 className="dress-code-title">Shelby Dress Code</h2>
           <p className="dress-code-text">
-            Flat cap is mandatory. Click in for the buying guide, from cheap backup options to
-            proper statement pieces.
+            Peaky Blinders style only. Flat cap is mandatory. Click in for the buying guide, from
+            cheap backup options to proper statement pieces.
           </p>
           <p className="dress-code-hint">
             {isOpen ? 'Hide flat cap buying options' : 'Tap to view flat cap buying options'}
@@ -67,6 +79,24 @@ const DressCodePanel = () => {
               Aim for dark layers, sharp shirt, polished shoes, and a proper flat cap on your
               head before first drinks. If anyone asks, this is non-negotiable.
             </p>
+            <div className="style-guide">
+              <div className="style-tip">
+                <span className="style-tip-label">Top Half</span>
+                <strong>White or dark button-up, optional waistcoat, structured jacket</strong>
+              </div>
+              <div className="style-tip">
+                <span className="style-tip-label">Bottom Half</span>
+                <strong>Tailored trousers or dark chinos, no boardies, no ripped denim</strong>
+              </div>
+              <div className="style-tip">
+                <span className="style-tip-label">Footwear</span>
+                <strong>Dress shoes or clean boots, polished enough for casino entry</strong>
+              </div>
+              <div className="style-tip">
+                <span className="style-tip-label">Non-Negotiable</span>
+                <strong>Flat cap on arrival, dark palette, look like you mean business</strong>
+              </div>
+            </div>
             <div className="flat-cap-links">
               {capOptions.map((cap) => (
                 <a

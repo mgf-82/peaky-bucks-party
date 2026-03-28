@@ -458,6 +458,36 @@ body {
     text-transform: uppercase;
 }
 
+.style-guide {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.style-tip {
+    display: grid;
+    gap: 8px;
+    padding: 14px 16px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.style-tip-label {
+    color: #ddb46b;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.style-tip strong {
+    color: #f6e4b3;
+    font-size: 0.98rem;
+    line-height: 1.5;
+}
+
 .flat-cap-links {
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -656,6 +686,7 @@ body {
         grid-template-columns: 1fr;
     }
 
+    .style-guide,
     .flat-cap-links {
         grid-template-columns: 1fr;
     }

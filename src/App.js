@@ -15,7 +15,7 @@ const App = () => {
       <section className="odds-ribbon" aria-label="Event highlights">
         <div className="odds-chip">
           <span className="odds-label">Dress Code</span>
-          <strong>Peaky Blinders Style</strong>
+          <strong>Shelby Dress Code</strong>
         </div>
         <div className="odds-chip">
           <span className="odds-label">Mood</span>
