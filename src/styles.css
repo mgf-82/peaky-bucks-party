@@ -226,7 +226,8 @@ body {
 
 .hero-card,
 .panel-card,
-.closing-card {
+.closing-card,
+.dress-code-card {
     position: relative;
     border-radius: 28px;
     border: 1px solid rgba(216, 174, 101, 0.22);
@@ -236,7 +237,8 @@ body {
 
 .hero-card::before,
 .closing-card::before,
-.panel-card::before {
+.panel-card::before,
+.dress-code-card::before {
     content: "";
     position: absolute;
     inset: 1px;
@@ -410,6 +412,63 @@ body {
     margin: 0 0 18px;
 }
 
+.dress-code-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 18px;
+    margin-bottom: 18px;
+    padding: 22px 20px;
+    background: linear-gradient(180deg, rgba(19, 22, 28, 0.9), rgba(31, 22, 15, 0.88));
+}
+
+.dress-code-title {
+    margin: 0;
+    font-family: "Cinzel", Georgia, serif;
+    font-size: clamp(1.7rem, 3vw, 2.5rem);
+    color: #f6e4b3;
+}
+
+.dress-code-text {
+    margin: 12px 0 0;
+    color: #c5b7a2;
+    line-height: 1.7;
+}
+
+.flat-cap-links {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.cap-link-card {
+    display: grid;
+    gap: 8px;
+    padding: 16px;
+    border-radius: 20px;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02)),
+        rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    text-decoration: none;
+}
+
+.cap-link-card strong {
+    color: #f6e4b3;
+    font-size: 1rem;
+}
+
+.cap-link-card span:last-child {
+    color: #c5b7a2;
+}
+
+.cap-link-tier {
+    color: #ddb46b;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
 .odds-chip {
     flex: 1 1 220px;
     padding: 16px 18px;
@@ -569,6 +628,11 @@ body {
     }
 
     .hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dress-code-card,
+    .flat-cap-links {
         grid-template-columns: 1fr;
     }
 }
