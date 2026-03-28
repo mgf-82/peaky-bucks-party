@@ -4,28 +4,38 @@ import ChevronIcon from './ChevronIcon';
 
 const scheduleItems = [
   {
-    time: '12:00 PM',
+    time: 'TBC',
     activity: 'Lawn Bowls @ Torrensville Bowls',
+    budget: '$25 each',
+    note: 'Strong opener and a civilised way to start the chaos.',
     mapsLink: 'https://www.google.com/maps/search/?api=1&query=Torrensville+Bowls',
   },
   {
-    time: '2:30 PM',
+    time: 'TBC',
     activity: 'Go-Karting @ P1 Entertainment',
+    budget: '$140 each',
+    note: 'Main spend early in the day, but worth it.',
     mapsLink: 'https://www.google.com/maps/search/?api=1&query=P1+Entertainment',
   },
   {
-    time: '4:30 PM',
+    time: 'TBC',
     activity: 'Casino & Pre-Drinks @ SkyCity Adelaide',
+    budget: 'See the bookie',
+    note: 'Budget depends how brave you are. Check the odds board below.',
     mapsLink: 'https://www.google.com/maps/search/?api=1&query=SkyCity+Adelaide',
   },
   {
-    time: '7:15 PM',
+    time: 'TBC',
     activity: 'Belles Hot Chicken @ Hindley St',
+    budget: 'Buy your own',
+    note: 'Feed yourself properly before the late shift.',
     mapsLink: 'https://www.google.com/maps/search/?api=1&query=Belles+Hot+Chicken',
   },
   {
-    time: '8:30 PM',
+    time: 'TBC',
     activity: 'Rooftop Meetup with Hens @ Location TBC',
+    budget: 'Who knows',
+    note: 'Financial forecasting becomes unreliable at this point.',
     mapsLink: 'https://www.google.com/maps/search/?api=1&query=Location+TBC',
   },
 ];
@@ -52,17 +62,22 @@ const FlashySchedule = () => {
             transition={{ duration: 0.35 }}
           >
             <p className="panel-copy">
-              A clean opening run that starts gentlemanly and ends somewhere between tactical
-              masterpiece and beautiful disaster.
+              Rough guide only for now. The exact timings are still TBC, but this is the shape of
+              the day and the kind of damage each stop is likely to do to the wallet.
             </p>
             <ul className="schedule-list">
               {scheduleItems.map((item, index) => (
-                <li key={item.time} className="schedule-item">
+                <li key={item.activity} className="schedule-item">
                   <div className="schedule-row">
                     <div className="schedule-time">{item.time}</div>
                     <div className="schedule-badge">Stop {index + 1}</div>
                   </div>
                   <div className="schedule-activity">{item.activity}</div>
+                  <div className="schedule-budget-row">
+                    <span className="schedule-budget-label">Budget</span>
+                    <strong className="schedule-budget-value">{item.budget}</strong>
+                  </div>
+                  <p className="schedule-note">{item.note}</p>
                   <a
                     href={item.mapsLink}
                     target="_blank"

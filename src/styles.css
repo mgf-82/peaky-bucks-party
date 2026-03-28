@@ -592,6 +592,35 @@ body {
     font-size: 1.02rem;
 }
 
+.schedule-budget-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.schedule-budget-label {
+    color: #ddb46b;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.schedule-budget-value {
+    color: #f6e4b3;
+    font-size: 0.98rem;
+}
+
+.schedule-note {
+    margin: 10px 0 0;
+    color: #9f9689;
+    line-height: 1.5;
+}
+
 .maps-link {
     margin-top: 10px;
     color: #ddb46b;
