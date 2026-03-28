@@ -3,6 +3,7 @@ import HeroHeader from './components/HeroHeader';
 import FlashySchedule from './components/FlashySchedule';
 import FlashyBookie from './components/FlashyBookie';
 import FlashyWinnersTax from './components/FlashyWinnersTax';
+import DressCodePanel from './components/DressCodePanel';
 
 const App = () => {
   return (
@@ -25,48 +26,7 @@ const App = () => {
           <strong>High Roller Energy</strong>
         </div>
       </section>
-      <section className="dress-code-card" aria-labelledby="dress-code-title">
-        <div className="dress-code-copy">
-          <p className="closing-eyebrow">Wardrobe Order</p>
-          <h2 className="dress-code-title" id="dress-code-title">Flat cap is mandatory.</h2>
-          <p className="dress-code-text">
-            Dress code is full Peaky Blinders energy: dark layers, sharp shirt, polished shoes,
-            and a proper flat cap on your head before first drinks.
-          </p>
-        </div>
-        <div className="flat-cap-links">
-          <a
-            className="cap-link-card"
-            href="https://www.target.com.au/p/mens-textured-flat-cap/71597065"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span className="cap-link-tier">Cheap</span>
-            <strong>Target Mens Textured Flat Cap</strong>
-            <span>About A$15</span>
-          </a>
-          <a
-            className="cap-link-card"
-            href="https://hatstoreaustralia.com/tropic-507-ventair-black-flat-cap-kangol"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span className="cap-link-tier">Mid</span>
-            <strong>Kangol Tropic 507 Ventair Flat Cap</strong>
-            <span>About A$88.99</span>
-          </a>
-          <a
-            className="cap-link-card"
-            href="https://hatstoreaustralia.com/tropic-507-charoal-flat-cap-kangol"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span className="cap-link-tier">Premium</span>
-            <strong>Kangol Tropic 507 Flat Cap</strong>
-            <span>About A$120.99</span>
-          </a>
-        </div>
-      </section>
+      <DressCodePanel />
       <main className="content-stack">
         <FlashySchedule />
         <FlashyBookie />

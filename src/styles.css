@@ -413,12 +413,27 @@ body {
 }
 
 .dress-code-card {
-    display: grid;
-    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-    gap: 18px;
     margin-bottom: 18px;
     padding: 22px 20px;
     background: linear-gradient(180deg, rgba(19, 22, 28, 0.9), rgba(31, 22, 15, 0.88));
+}
+
+.dress-code-toggle {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+
+.dress-code-content {
+    overflow: hidden;
 }
 
 .dress-code-title {
@@ -434,10 +449,20 @@ body {
     line-height: 1.7;
 }
 
+.dress-code-hint {
+    margin: 14px 0 0;
+    color: #ddb46b;
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
 .flat-cap-links {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 12px;
+    margin-top: 18px;
 }
 
 .cap-link-card {
@@ -631,7 +656,6 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .dress-code-card,
     .flat-cap-links {
         grid-template-columns: 1fr;
     }
