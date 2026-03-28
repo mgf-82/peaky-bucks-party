@@ -1,0 +1,22 @@
+{
+  "name": "peaky-bucks-party",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A Peaky Blinders themed Bucks Party application in Adelaide.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-scripts": "5.0.0",
+    "framer-motion": "^4.1.17",
+    "lucide-react": "^0.1.0"
+  },
+  "homepage": ".",
+  "license": "MIT"
+}
