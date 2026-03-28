@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import ShelbyBadge from './ShelbyBadge';
 
 const quotes = [
   'By order of the Peaky Blinders.',
@@ -34,7 +33,6 @@ const HeroHeader = () => {
           </div>
         </div>
         <div className="hero-sidecard">
-          <ShelbyBadge />
           <p className="sidecard-label">Tonight&apos;s Ledger</p>
           <div className="sidecard-row">
             <span>Stops</span>
