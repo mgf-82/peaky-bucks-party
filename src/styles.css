@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Manrope:wght@400;500;700;800&display=swap');
+
 :root {
     --bg-top: #15171b;
     --bg-bottom: #090a0d;
@@ -199,5 +201,396 @@ button {
 
     .panel-title {
         font-size: 1.35rem;
+    }
+}
+
+body {
+    background:
+        radial-gradient(circle at top, rgba(221, 180, 107, 0.14), transparent 24%),
+        radial-gradient(circle at 20% 20%, rgba(207, 83, 56, 0.12), transparent 20%),
+        linear-gradient(180deg, #161114 0%, #08090c 45%, #050608 100%);
+    font-family: "Manrope", "Segoe UI", sans-serif;
+}
+
+.app-shell {
+    position: relative;
+    overflow: hidden;
+    width: min(100%, 1120px);
+    padding: 28px 16px 60px;
+}
+
+.content-stack {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.hero-card,
+.panel-card,
+.closing-card {
+    position: relative;
+    border-radius: 28px;
+    border: 1px solid rgba(216, 174, 101, 0.22);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(16px);
+}
+
+.hero-card::before,
+.closing-card::before,
+.panel-card::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: inherit;
+    pointer-events: none;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.06), transparent 26%, transparent 70%, rgba(255, 255, 255, 0.03));
+}
+
+.hero-card {
+    padding: 28px;
+    margin-bottom: 18px;
+    overflow: hidden;
+    text-align: left;
+}
+
+.hero-card::after {
+    content: "";
+    position: absolute;
+    inset: auto -80px -120px auto;
+    width: 320px;
+    height: 320px;
+    background: radial-gradient(circle, rgba(207, 83, 56, 0.22), transparent 62%);
+    filter: blur(8px);
+    pointer-events: none;
+}
+
+.eyebrow,
+.panel-eyebrow,
+.closing-eyebrow,
+.hero-kicker,
+.sidecard-label,
+.odds-label,
+.tax-rule-label {
+    color: #ddb46b;
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+}
+
+.eyebrow {
+    margin-bottom: 10px;
+}
+
+.hero-title,
+.panel-title,
+.tier-card h3,
+.closing-title {
+    font-family: "Cinzel", Georgia, serif;
+    color: #f6e4b3;
+}
+
+.hero-title {
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    line-height: 1.05;
+    max-width: 10ch;
+}
+
+.hero-meta {
+    max-width: 40rem;
+}
+
+.hero-quote {
+    padding-left: 16px;
+    border-left: 3px solid rgba(221, 180, 107, 0.45);
+    line-height: 1.7;
+    max-width: 34rem;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(260px, 0.9fr);
+    gap: 24px;
+    align-items: end;
+}
+
+.hero-copy-block,
+.hero-sidecard {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-sidecard,
+.closing-card,
+.odds-chip,
+.tax-highlight {
+    background: linear-gradient(180deg, rgba(17, 20, 25, 0.94), rgba(31, 22, 15, 0.9));
+    border: 1px solid rgba(255, 91, 60, 0.26);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.hero-sidecard {
+    padding: 18px;
+    border-radius: 22px;
+}
+
+.hero-topline,
+.schedule-row,
+.tier-header,
+.sidecard-row,
+.tax-rules,
+.hero-actions,
+.odds-ribbon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.sidecard-row {
+    padding: 10px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    color: #c5b7a2;
+}
+
+.sidecard-row strong,
+.odds-chip strong,
+.tax-rule strong {
+    color: #f6e4b3;
+}
+
+.hero-actions {
+    margin-top: 22px;
+    justify-content: flex-start;
+}
+
+.hero-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0 18px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 800;
+    transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.hero-button:hover,
+.hero-button:focus-visible {
+    transform: translateY(-2px);
+}
+
+.hero-button-primary {
+    background: linear-gradient(135deg, #ddb46b, #b9853b);
+    color: #17110d;
+}
+
+.hero-button-secondary {
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.04);
+    color: #f7f3eb;
+}
+
+.status-badge,
+.schedule-badge,
+.tier-tag {
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.06);
+    color: #f7f3eb;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.odds-ribbon {
+    margin: 0 0 18px;
+}
+
+.odds-chip {
+    flex: 1 1 220px;
+    padding: 16px 18px;
+    border-radius: 20px;
+}
+
+.odds-chip strong {
+    display: block;
+    font-size: 1.1rem;
+}
+
+.panel-card {
+    padding: 22px 20px 18px;
+    min-height: 100%;
+}
+
+.panel-toggle {
+    align-items: flex-start;
+}
+
+.panel-title {
+    font-size: 1.7rem;
+    line-height: 1.1;
+}
+
+.panel-copy {
+    line-height: 1.7;
+}
+
+.schedule-list,
+.tier-list {
+    gap: 14px;
+}
+
+.schedule-item,
+.tier-card {
+    padding: 16px;
+    border-radius: 18px;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02)),
+        rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.schedule-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.schedule-item::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(221, 180, 107, 0), rgba(221, 180, 107, 0.65), rgba(221, 180, 107, 0));
+}
+
+.schedule-time {
+    color: #f6e4b3;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+}
+
+.schedule-activity {
+    margin-top: 10px;
+    font-size: 1.02rem;
+}
+
+.maps-link {
+    margin-top: 10px;
+    color: #ddb46b;
+    font-weight: 700;
+}
+
+.tier-detail {
+    margin-top: 10px !important;
+    color: #9f9689 !important;
+    line-height: 1.6;
+}
+
+.tax-highlight {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+    align-items: center;
+    margin-top: 18px;
+    padding: 18px;
+    border-radius: 22px;
+}
+
+.tax-value {
+    font-family: "Cinzel", Georgia, serif;
+    font-size: clamp(2.6rem, 8vw, 4rem);
+    color: #cf5338;
+    line-height: 1;
+}
+
+.tax-copy {
+    margin: 0;
+    color: #f7f3eb;
+    line-height: 1.5;
+}
+
+.tax-rules {
+    margin-top: 18px;
+}
+
+.tax-rule {
+    flex: 1 1 220px;
+    padding: 14px 16px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.closing-card {
+    margin-top: 18px;
+    padding: 24px 26px;
+    text-align: center;
+}
+
+.closing-title {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+.closing-copy {
+    max-width: 44rem;
+    margin: 14px auto 0;
+    color: #c5b7a2;
+    line-height: 1.7;
+}
+
+.atmosphere,
+.pinstripe-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.atmosphere-left {
+    background: radial-gradient(circle at 12% 22%, rgba(239, 102, 73, 0.13), transparent 24%);
+}
+
+.atmosphere-right {
+    background: radial-gradient(circle at 86% 16%, rgba(136, 187, 139, 0.12), transparent 20%);
+}
+
+.pinstripe-overlay {
+    opacity: 0.2;
+    background-image: linear-gradient(90deg, transparent, transparent 11px, rgba(255, 255, 255, 0.03) 12px);
+    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.3), transparent 75%);
+}
+
+@media (max-width: 900px) {
+    .content-stack {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .app-shell {
+        padding: 16px 12px 36px;
+    }
+
+    .hero-card {
+        padding: 22px 16px;
+    }
+
+    .panel-card {
+        padding: 18px 14px 16px;
+    }
+
+    .hero-title {
+        font-size: 2.35rem;
+    }
+
+    .tax-highlight {
+        grid-template-columns: 1fr;
     }
 }

@@ -1,18 +1,43 @@
 import React from 'react';
-import Header from './components/Header';
-import Schedule from './components/Schedule';
-import Bookie from './components/Bookie';
-import WinnersTax from './components/WinnersTax';
+import HeroHeader from './components/HeroHeader';
+import FlashySchedule from './components/FlashySchedule';
+import FlashyBookie from './components/FlashyBookie';
+import FlashyWinnersTax from './components/FlashyWinnersTax';
 
 const App = () => {
   return (
     <div className="app-shell">
-      <Header />
+      <div className="atmosphere atmosphere-left" aria-hidden="true" />
+      <div className="atmosphere atmosphere-right" aria-hidden="true" />
+      <div className="pinstripe-overlay" aria-hidden="true" />
+      <HeroHeader />
+      <section className="odds-ribbon" aria-label="Event highlights">
+        <div className="odds-chip">
+          <span className="odds-label">Dress Code</span>
+          <strong>Sharp &amp; Suspicious</strong>
+        </div>
+        <div className="odds-chip">
+          <span className="odds-label">Mood</span>
+          <strong>Speakeasy Chaos</strong>
+        </div>
+        <div className="odds-chip">
+          <span className="odds-label">Confidence</span>
+          <strong>High Roller Energy</strong>
+        </div>
+      </section>
       <main className="content-stack">
-        <Schedule />
-        <Bookie />
-        <WinnersTax />
+        <FlashySchedule />
+        <FlashyBookie />
+        <FlashyWinnersTax />
       </main>
+      <section className="closing-card">
+        <p className="closing-eyebrow">House Rules</p>
+        <h2 className="closing-title">Make it loud. Keep it classy. Leave with stories.</h2>
+        <p className="closing-copy">
+          This is a full-night campaign with polished looks, reckless confidence, and enough
+          bookmaker swagger to keep the groom well supplied.
+        </p>
+      </section>
     </div>
   );
 };
