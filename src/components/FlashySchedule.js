@@ -4,35 +4,35 @@ import ChevronIcon from './ChevronIcon';
 
 const scheduleItems = [
   {
-    time: 'TBC',
-    activity: 'Lawn Bowls @ Torrensville Bowls',
-    budget: '$25 each',
-    note: 'Strong opener and a civilised way to start the chaos.',
-    mapsLink: 'https://www.google.com/maps/search/?api=1&query=Torrensville+Bowls',
+    time: '12:00 PM',
+    activity: 'Go-Karting @ OZ E-Karts, Holden Hill',
+    budget: '$100pp',
+    note: 'This is the rendezvous point, so everyone starts here.',
+    mapsLink: 'https://www.google.com/maps/search/?api=1&query=OZ+E-Karts+Holden+Hill',
   },
   {
-    time: 'TBC',
-    activity: 'Go-Karting @ P1 Entertainment',
-    budget: '$140 each',
-    note: 'Main spend early in the day, but worth it.',
-    mapsLink: 'https://www.google.com/maps/search/?api=1&query=P1+Entertainment',
+    time: '3:00 PM',
+    activity: 'Lawn Bowls @ Adelaide Bowling Club',
+    budget: '$25',
+    note: 'Strong follow-up move once the karts have done the damage.',
+    mapsLink: 'https://www.google.com/maps/search/?api=1&query=Adelaide+Bowling+Club',
   },
   {
-    time: 'TBC',
+    time: '5:00 PM',
     activity: 'Casino & Pre-Drinks @ SkyCity Adelaide',
     budget: 'See the bookie',
     note: 'Budget depends how brave you are. Check the odds board below.',
     mapsLink: 'https://www.google.com/maps/search/?api=1&query=SkyCity+Adelaide',
   },
   {
-    time: 'TBC',
+    time: '7:15 PM',
     activity: 'Belles Hot Chicken @ Hindley St',
     budget: 'Buy your own',
     note: 'Feed yourself properly before the late shift.',
     mapsLink: 'https://www.google.com/maps/search/?api=1&query=Belles+Hot+Chicken',
   },
   {
-    time: 'TBC',
+    time: '8:30 PM',
     activity: 'Rooftop Meetup with Hens @ Location TBC',
     budget: 'Who knows',
     note: 'Financial forecasting becomes unreliable at this point.',
@@ -62,8 +62,9 @@ const FlashySchedule = () => {
             transition={{ duration: 0.35 }}
           >
             <p className="panel-copy">
-              Rough guide only for now. The exact timings are still TBC, but this is the shape of
-              the day and the kind of damage each stop is likely to do to the wallet.
+              The running order is taking shape now. A few pieces are locked in, a few are still
+              flexible, but this is the current plan and the kind of damage each stop is likely to
+              do to the wallet.
             </p>
             <ul className="schedule-list">
               {scheduleItems.map((item, index) => (
