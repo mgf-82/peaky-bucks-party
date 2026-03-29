@@ -22,10 +22,22 @@ const capOptions = [
     href: 'https://www.target.com.au/p/mens-cotton-flat-cap/71596471',
   },
   {
+    tier: 'Ghelter | Black',
+    name: 'Ghelter Classic Mesh Flat Cap - Black',
+    price: 'About EUR 14.90',
+    href: 'https://www.ghelter.com/products/ghelter-classic-mesh-flat-cap',
+  },
+  {
     tier: 'Shelby | Grey',
     name: 'Target Mens Textured Flat Cap',
     price: 'About A$15',
     href: 'https://www.target.com.au/p/mens-textured-flat-cap/71597065',
+  },
+  {
+    tier: 'Ghelter | Grey',
+    name: 'Gatsby Series Flat Cap - Gray',
+    price: 'About EUR 28.90',
+    href: 'https://www.ghelter.com/products/gatsby-series-flat-cap',
   },
   {
     tier: 'Shelby',
