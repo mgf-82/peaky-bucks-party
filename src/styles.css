@@ -531,6 +531,52 @@ body {
     background: linear-gradient(180deg, rgba(19, 22, 28, 0.9), rgba(31, 22, 15, 0.88));
 }
 
+.must-do-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 18px;
+    padding: 22px 20px;
+    border-radius: 24px;
+    background: linear-gradient(180deg, rgba(19, 22, 28, 0.9), rgba(24, 29, 24, 0.88));
+    border: 1px solid rgba(136, 187, 139, 0.18);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.24);
+}
+
+.must-do-title {
+    margin: 0;
+    font-family: "Cinzel", Georgia, serif;
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    color: #f6e4b3;
+}
+
+.must-do-text {
+    margin: 12px 0 0;
+    color: #c5b7a2;
+    line-height: 1.7;
+    max-width: 42rem;
+}
+
+.must-do-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 0 18px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #88bb8b, #5d8e60);
+    color: #0f1510;
+    font-weight: 800;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.must-do-link:hover,
+.must-do-link:focus-visible {
+    transform: translateY(-2px);
+}
+
 .dress-code-toggle {
     display: flex;
     align-items: flex-start;
@@ -771,14 +817,29 @@ body {
 
 .tax-rules {
     margin-top: 18px;
+    align-items: stretch;
 }
 
 .tax-rule {
     flex: 1 1 220px;
+    display: grid;
+    gap: 10px;
     padding: 14px 16px;
     border-radius: 16px;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.tax-rule-label {
+    display: block;
+    margin: 0;
+}
+
+.tax-rule strong {
+    display: block;
+    color: #f6e4b3;
+    font-size: 1rem;
+    line-height: 1.45;
 }
 
 .closing-card {
@@ -826,6 +887,11 @@ body {
 
     .hero-grid {
         grid-template-columns: 1fr;
+    }
+
+    .must-do-card {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .style-guide,

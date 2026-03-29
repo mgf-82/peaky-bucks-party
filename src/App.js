@@ -26,6 +26,24 @@ const App = () => {
           <strong>High Roller Energy</strong>
         </div>
       </section>
+      <section className="must-do-card" aria-labelledby="must-do-title">
+        <div>
+          <p className="closing-eyebrow">Must Dos</p>
+          <h2 className="must-do-title" id="must-do-title">Complete this before karting.</h2>
+          <p className="must-do-text">
+            OZ E-Karts registration and waiver needs to be done before race day so nobody is
+            standing around at the rendezvous point filling forms.
+          </p>
+        </div>
+        <a
+          className="must-do-link"
+          href="https://web.racefacer.com/kiosk/ozekarts?booking=5142271b-4054-4907-89f1-8cdd47e982ec"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          OZK0173 Pre-Registration Link
+        </a>
+      </section>
       <DressCodePanel />
       <main className="content-stack">
         <FlashySchedule />
