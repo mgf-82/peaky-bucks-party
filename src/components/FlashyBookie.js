@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import ChevronIcon from './ChevronIcon';
 
 const FlashyBookie = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <section className="panel-card" id="bookie">

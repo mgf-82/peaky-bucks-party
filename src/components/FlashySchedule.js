@@ -41,7 +41,7 @@ const scheduleItems = [
 ];
 
 const FlashySchedule = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <section className="panel-card" id="schedule">
