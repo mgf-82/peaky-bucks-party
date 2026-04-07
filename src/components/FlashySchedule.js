@@ -32,11 +32,11 @@ const scheduleItems = [
     mapsLink: 'https://www.google.com/maps/search/?api=1&query=Belles+Hot+Chicken',
   },
   {
-    time: '8:30 PM',
-    activity: 'Rooftop Meetup with Hens @ Location TBC',
+    time: '8:30 - 9:00PM',
+    activity: 'Rooftop Meetup with Hens @ 2KW Bar & Restaurant',
     budget: 'Who knows',
     note: 'Financial forecasting becomes unreliable at this point.',
-    mapsLink: 'https://www.google.com/maps/search/?api=1&query=Location+TBC',
+    mapsLink: 'https://www.google.com/maps/search/?api=1&query=2KW+Bar+%26+Restaurant',
   },
 ];
 
