@@ -17,39 +17,24 @@ const HeroHeader = () => {
         <p className="eyebrow">Bucks Party Guide</p>
         <div className="status-badge">Adelaide After Dark</div>
       </div>
-      <div className="hero-grid">
-        <div className="hero-copy-block">
-          <p className="hero-kicker">By order of the groom</p>
-          <h1 className="hero-title">The Order of the Peaky Blinders</h1>
-          <p className="hero-meta">18 April 2026 | Adelaide CBD | Bowls, karts, casino, rooftops</p>
-          <blockquote className="hero-quote">{quote}</blockquote>
-          <div className="hero-actions">
-            <a className="hero-button hero-button-primary" href="#schedule">
-              View the Action
-            </a>
-            <a className="hero-button hero-button-secondary" href="#bookie">
-              Check the Odds
-            </a>
-          </div>
-        </div>
-        <div className="hero-sidecard">
-          <p className="sidecard-label">Tonight&apos;s Ledger</p>
-          <div className="sidecard-row">
-            <span>Stops</span>
-            <strong>5</strong>
-          </div>
-          <div className="sidecard-row">
-            <span>Starting Bell</span>
-            <strong>12:00 PM</strong>
-          </div>
-          <div className="sidecard-row">
-            <span>Risk Profile</span>
-            <strong>Delightfully poor</strong>
-          </div>
-          <div className="sidecard-row">
-            <span>Expected Finish</span>
-            <strong>Questionable</strong>
-          </div>
+      <div className="hero-copy-block">
+        <p className="hero-kicker">By order of the groom</p>
+        <h1 className="hero-title">The Order of the Peaky Blinders</h1>
+        <p className="hero-meta">
+          One clear mission: get the crew registered, dressed sharply, and through the full run
+          from karts to rooftops without losing the plot too early.
+        </p>
+        <blockquote className="hero-quote">{quote}</blockquote>
+        <div className="hero-actions">
+          <a className="hero-button hero-button-primary" href="#schedule">
+            View the Day Plan
+          </a>
+          <a className="hero-button hero-button-secondary" href="#dress-code">
+            Dress Code
+          </a>
+          <a className="hero-button hero-button-secondary" href="#bookie">
+            Check the Odds
+          </a>
         </div>
       </div>
     </header>

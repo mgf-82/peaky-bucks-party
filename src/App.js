@@ -2,8 +2,8 @@ import React from 'react';
 import HeroHeader from './components/HeroHeader';
 import FlashySchedule from './components/FlashySchedule';
 import FlashyBookie from './components/FlashyBookie';
-import FlashyWinnersTax from './components/FlashyWinnersTax';
 import DressCodePanel from './components/DressCodePanel';
+import WinnersTax from './components/WinnersTax';
 
 const App = () => {
   return (
@@ -12,18 +12,22 @@ const App = () => {
       <div className="atmosphere atmosphere-right" aria-hidden="true" />
       <div className="pinstripe-overlay" aria-hidden="true" />
       <HeroHeader />
-      <section className="odds-ribbon" aria-label="Event highlights">
-        <div className="odds-chip">
-          <span className="odds-label">Dress Code</span>
-          <strong>Shelby Dress Code</strong>
+      <section className="event-facts" aria-label="Event facts">
+        <div className="event-fact">
+          <span className="event-fact-label">Date</span>
+          <strong>18 April 2026</strong>
         </div>
-        <div className="odds-chip">
-          <span className="odds-label">Mood</span>
-          <strong>Speakeasy Chaos</strong>
+        <div className="event-fact">
+          <span className="event-fact-label">Area</span>
+          <strong>Adelaide CBD</strong>
         </div>
-        <div className="odds-chip">
-          <span className="odds-label">Confidence</span>
-          <strong>High Roller Energy</strong>
+        <div className="event-fact">
+          <span className="event-fact-label">Stops</span>
+          <strong>5 locks for the ledger</strong>
+        </div>
+        <div className="event-fact">
+          <span className="event-fact-label">Mood</span>
+          <strong>Speakeasy chaos</strong>
         </div>
       </section>
       <section className="must-do-card" aria-labelledby="must-do-title">
@@ -44,18 +48,23 @@ const App = () => {
           OZK0173 Pre-Registration Link
         </a>
       </section>
-      <DressCodePanel />
-      <main className="content-stack">
-        <FlashySchedule />
-        <FlashyBookie />
-        <FlashyWinnersTax />
+      <main className="page-layout">
+        <div className="primary-column">
+          <FlashySchedule />
+        </div>
+        <aside className="support-column">
+          <DressCodePanel />
+          <FlashyBookie />
+          <WinnersTax />
+        </aside>
       </main>
       <section className="closing-card">
-        <p className="closing-eyebrow">House Rules</p>
+        <p className="closing-eyebrow">Final Word</p>
         <h2 className="closing-title">Make it loud. Keep it classy. Leave with stories.</h2>
         <p className="closing-copy">
-          This is a full-night campaign with polished looks, reckless confidence, and enough
-          bookmaker swagger to keep the groom well supplied.
+          Everything important is above: register before race day, show up dressed properly, and
+          follow the running order once the engines fire. After that, the only job left is to make
+          the groom look like he planned a legendary day out.
         </p>
       </section>
     </div>

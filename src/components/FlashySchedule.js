@@ -41,14 +41,18 @@ const scheduleItems = [
 ];
 
 const FlashySchedule = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
-    <section className="panel-card" id="schedule">
-      <button type="button" className="panel-toggle" onClick={() => setIsOpen(!isOpen)}>
+    <section className="panel-card panel-card-primary" id="schedule">
+      <button
+        type="button"
+        className="panel-toggle panel-toggle-prominent"
+        onClick={() => setIsOpen(!isOpen)}
+      >
         <div>
           <p className="panel-eyebrow">Field Report</p>
-          <h2 className="panel-title">The Schedule</h2>
+          <h2 className="panel-title">The Day Plan</h2>
         </div>
         <ChevronIcon direction={isOpen ? 'up' : 'down'} />
       </button>
@@ -62,9 +66,8 @@ const FlashySchedule = () => {
             transition={{ duration: 0.35 }}
           >
             <p className="panel-copy">
-              The running order is taking shape now. A few pieces are locked in, a few are still
-              flexible, but this is the current plan and the kind of damage each stop is likely to
-              do to the wallet.
+              This is the running order for the day. If someone only reads one section on the page,
+              it should be this one.
             </p>
             <ul className="schedule-list">
               {scheduleItems.map((item, index) => (

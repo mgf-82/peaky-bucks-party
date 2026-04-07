@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import ChevronIcon from './ChevronIcon';
 
 const capOptions = [
@@ -75,71 +75,73 @@ const DressCodePanel = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section className="dress-code-card" id="dress-code">
-      <button type="button" className="dress-code-toggle" onClick={() => setIsOpen(!isOpen)}>
-        <div className="dress-code-copy">
-          <p className="closing-eyebrow">Wardrobe Order</p>
-          <h2 className="dress-code-title">Shelby Dress Code</h2>
-          <p className="dress-code-text">
-            Peaky Blinders style only. Flat cap is mandatory. Click in for the buying guide, from
-            cheap backup options to proper statement pieces.
-          </p>
-          <p className="dress-code-hint">
-            {isOpen ? 'Hide flat cap buying options' : 'Tap to view flat cap buying options'}
-          </p>
+    <section className="dress-code-card panel-card-compact" id="dress-code">
+      <div className="dress-code-copy">
+        <p className="closing-eyebrow">Wardrobe Order</p>
+        <h2 className="dress-code-title">Shelby Dress Code</h2>
+        <p className="dress-code-text">
+          Show up looking sharp: white shirt, black tie, dark trousers, proper shoes, and a flat
+          cap on arrival.
+        </p>
+      </div>
+      <div className="dress-code-content dress-code-summary">
+        <div className="style-guide">
+          <div className="style-tip">
+            <span className="style-tip-label">Top Half</span>
+            <strong>White button-up and black tie. Jacket or waistcoat is optional.</strong>
+          </div>
+          <div className="style-tip">
+            <span className="style-tip-label">Bottom Half</span>
+            <strong>Black or charcoal trousers. Dark chinos work if they still look sharp.</strong>
+          </div>
+          <div className="style-tip">
+            <span className="style-tip-label">Footwear</span>
+            <strong>Boots or clean dress shoes, comfortable enough to survive the full day.</strong>
+          </div>
+          <div className="style-tip">
+            <span className="style-tip-label">Non-Negotiable</span>
+            <strong>Flat cap on arrival, dark palette, and no casual gear killing the look.</strong>
+          </div>
         </div>
-        <ChevronIcon direction={isOpen ? 'up' : 'down'} />
-      </button>
-      <AnimatePresence initial={false}>
-        {isOpen && (
-          <motion.div
-            className="dress-code-content"
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.35 }}
-          >
-            <p className="dress-code-text">
-              Keep it practical for a big day out: white shirt, black tie, trousers, and boots or
-              clean dress shoes. Jacket or waistcoat is optional, but the flat cap is
-              non-negotiable.
-            </p>
-            <div className="style-guide">
-              <div className="style-tip">
-                <span className="style-tip-label">Top Half</span>
-                <strong>White button-up and black tie. Jacket or waistcoat is optional.</strong>
+        <button
+          type="button"
+          className="panel-toggle dress-code-toggle-button"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <div>
+            <p className="panel-eyebrow">Buying Guide</p>
+            <p className="dress-code-hint">Open the flat-cap shortlist</p>
+          </div>
+          <ChevronIcon direction={isOpen ? 'up' : 'down'} />
+        </button>
+        <AnimatePresence initial={false}>
+          {isOpen && (
+            <motion.div
+              className="dress-code-shopping"
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.35 }}
+            >
+              <div className="flat-cap-links">
+                {capOptions.map((cap) => (
+                  <a
+                    key={cap.name}
+                    className="cap-link-card"
+                    href={cap.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span className="cap-link-tier">{cap.tier}</span>
+                    <strong>{cap.name}</strong>
+                    <span>{cap.price}</span>
+                  </a>
+                ))}
               </div>
-              <div className="style-tip">
-                <span className="style-tip-label">Bottom Half</span>
-                <strong>Black or charcoal trousers. Dark chinos work if they still look sharp.</strong>
-              </div>
-              <div className="style-tip">
-                <span className="style-tip-label">Footwear</span>
-                <strong>Boots or clean dress shoes, comfortable enough to survive the full day.</strong>
-              </div>
-              <div className="style-tip">
-                <span className="style-tip-label">Non-Negotiable</span>
-                <strong>Flat cap on arrival, dark palette, and no casual gear killing the look.</strong>
-              </div>
-            </div>
-            <div className="flat-cap-links">
-              {capOptions.map((cap) => (
-                <a
-                  key={cap.name}
-                  className="cap-link-card"
-                  href={cap.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span className="cap-link-tier">{cap.tier}</span>
-                  <strong>{cap.name}</strong>
-                  <span>{cap.price}</span>
-                </a>
-              ))}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
     </section>
   );
 };

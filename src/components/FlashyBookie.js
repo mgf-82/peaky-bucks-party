@@ -24,8 +24,8 @@ const FlashyBookie = () => {
             transition={{ duration: 0.35 }}
           >
             <p className="panel-copy">
-              Pick your appetite for mayhem. Every tier buys a seat at the table, but only one of
-              them properly says, &quot;let&apos;s make this memorable.&quot;
+              Suggested budget tiers for the casino stop. Use this as a rough comfort guide, not a
+              dare.
             </p>
             <div className="tier-list">
               <div className="tier-card">
@@ -33,7 +33,7 @@ const FlashyBookie = () => {
                   <h3>Tier 1 | Social</h3>
                   <span className="tier-tag">Warm-Up</span>
                 </div>
-                <p>Budget: $50</p>
+                <p className="tier-budget">Budget: $50</p>
                 <p className="tier-detail">
                   A tidy little flutter for good banter and safe optimism.
                 </p>
@@ -43,7 +43,7 @@ const FlashyBookie = () => {
                   <h3>Tier 2 | Mid-Tier</h3>
                   <span className="tier-tag">Live Wire</span>
                 </div>
-                <p>Budget: $200</p>
+                <p className="tier-budget">Budget: $200</p>
                 <p className="tier-detail">
                   Enough confidence to talk like a bookmaker and back it up.
                 </p>
@@ -53,7 +53,7 @@ const FlashyBookie = () => {
                   <h3>Tier 3 | High Roller</h3>
                   <span className="tier-tag">Main Character</span>
                 </div>
-                <p>Budget: $300+ at The District Poker Room</p>
+                <p className="tier-budget">Budget: $300+ at The District Poker Room</p>
                 <p className="tier-detail">
                   For the man who hears &quot;bad idea&quot; and calls it destiny.
                 </p>

@@ -1,38 +1,33 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import ChevronIcon from './ChevronIcon';
+import React from 'react';
 
 const WinnersTax = () => {
-    const [isOpen, setIsOpen] = useState(false);
-
-    const toggleAccordion = () => {
-        setIsOpen(!isOpen);
-    };
-
-    return (
-        <section className="panel-card">
-            <button type="button" className="panel-toggle" onClick={toggleAccordion}>
-                <h2 className="panel-title">The Winner&apos;s Tax</h2>
-                <ChevronIcon direction={isOpen ? 'up' : 'down'} />
-            </button>
-            <AnimatePresence>
-                {isOpen && (
-                    <motion.div
-                        className="panel-content"
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.3 }}
-                    >
-                        <p className="panel-copy">
-                            The "Bucks Tax" is a fun way to ensure the groom's drinks are covered. 
-                            Remember, 10% of all gambling winnings will go toward the groom's drinks.
-                        </p>
-                    </motion.div>
-                )}
-            </AnimatePresence>
-        </section>
-    );
+  return (
+    <section className="panel-card panel-card-compact" id="winners-tax">
+      <div className="panel-toggle panel-toggle-static">
+        <div>
+          <p className="panel-eyebrow">House Rule</p>
+          <h2 className="panel-title">The Winner&apos;s Tax</h2>
+        </div>
+        <div className="tax-chip">10%</div>
+      </div>
+      <div className="panel-content">
+        <p className="panel-copy">
+          Any gambling winnings owe a ten percent cut to the groom&apos;s drinks fund. Win big,
+          celebrate hard, then pay the house.
+        </p>
+        <div className="tax-rules tax-rules-compact">
+          <div className="tax-rule">
+            <span className="tax-rule-label">Reason</span>
+            <strong>Keep the drinks flowing</strong>
+          </div>
+          <div className="tax-rule">
+            <span className="tax-rule-label">Spirit</span>
+            <strong>Generous, smug, mandatory</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default WinnersTax;
