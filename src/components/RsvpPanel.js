@@ -61,7 +61,7 @@ const RsvpPanel = () => {
       setFormData(initialForm);
       setStatus({
         type: 'success',
-        message: 'Attendance sent. Michael will get the notification shortly.',
+        message: 'Attendance sent. Gus will get the notification shortly.',
       });
     } catch (error) {
       setStatus({
@@ -79,7 +79,7 @@ const RsvpPanel = () => {
         <p className="closing-eyebrow">RSVP Ledger</p>
         <h2 className="must-do-title" id="rsvp-title">Lock in your attendance.</h2>
         <p className="must-do-text">
-          Send your answer here so Michael gets a proper attendance notification without chasing
+          Send your answer here so Gus gets a proper attendance notification without chasing
           everyone down.
         </p>
       </div>
