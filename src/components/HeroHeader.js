@@ -26,6 +26,9 @@ const HeroHeader = () => {
         </p>
         <blockquote className="hero-quote">{quote}</blockquote>
         <div className="hero-actions">
+          <a className="hero-button hero-button-primary" href="#rsvp">
+            RSVP Now
+          </a>
           <a className="hero-button hero-button-primary" href="#schedule">
             View the Day Plan
           </a>

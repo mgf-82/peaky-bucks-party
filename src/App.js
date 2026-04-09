@@ -4,6 +4,7 @@ import FlashySchedule from './components/FlashySchedule';
 import FlashyBookie from './components/FlashyBookie';
 import DressCodePanel from './components/DressCodePanel';
 import WinnersTax from './components/WinnersTax';
+import RsvpPanel from './components/RsvpPanel';
 
 const App = () => {
   return (
@@ -30,6 +31,7 @@ const App = () => {
           <strong>Speakeasy chaos</strong>
         </div>
       </section>
+      <RsvpPanel />
       <section className="must-do-card" aria-labelledby="must-do-title">
         <div>
           <p className="closing-eyebrow">Must Dos</p>
