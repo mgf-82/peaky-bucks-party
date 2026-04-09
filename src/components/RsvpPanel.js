@@ -107,6 +107,22 @@ const RsvpPanel = () => {
             ))}
           </ul>
         </div>
+        <div className="payment-card" aria-labelledby="payment-title">
+          <div className="confirmed-list-header">
+            <p className="panel-eyebrow" id="payment-title">Payment Details</p>
+            <span className="status-badge">$125.00 owed</span>
+          </div>
+          <div className="payment-grid">
+            <div className="payment-item">
+              <span className="rsvp-label">PAYID For Gus</span>
+              <strong>0404 292 668</strong>
+            </div>
+            <div className="payment-item">
+              <span className="rsvp-label">Total Owed</span>
+              <strong>$125.00</strong>
+            </div>
+          </div>
+        </div>
       </div>
       <form className="rsvp-form" onSubmit={handleSubmit}>
         <label className="rsvp-field">
