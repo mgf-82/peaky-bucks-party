@@ -393,6 +393,12 @@ button {
   color: #ffb7aa;
 }
 
+.attendance-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
 .confirmed-list-card {
   display: grid;
   gap: 14px;
@@ -402,6 +408,11 @@ button {
     linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02)),
     rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.confirmed-list-card-out {
+  border-color: rgba(207, 83, 56, 0.22);
+  background: linear-gradient(180deg, rgba(34, 20, 18, 0.92), rgba(24, 16, 13, 0.88));
 }
 
 .payment-card {
@@ -465,6 +476,11 @@ button {
   background: linear-gradient(135deg, var(--success), #5d8e60);
   box-shadow: 0 0 0 4px rgba(136, 187, 139, 0.12);
   flex: 0 0 auto;
+}
+
+.confirmed-bullet-out {
+  background: linear-gradient(135deg, #d46d56, #a9422a);
+  box-shadow: 0 0 0 4px rgba(207, 83, 56, 0.12);
 }
 
 .must-do-title {
@@ -862,6 +878,7 @@ button {
   .style-guide,
   .flat-cap-links,
   .rsvp-form,
+  .attendance-columns,
   .payment-grid {
     grid-template-columns: 1fr;
   }

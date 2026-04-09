@@ -24,6 +24,8 @@ const confirmedAttendees = [
   'Allan W',
 ];
 
+const confirmedOutAttendees = ['Matt T'];
+
 const RsvpPanel = () => {
   const [formData, setFormData] = useState(initialForm);
   const [status, setStatus] = useState({ type: 'idle', message: '' });
@@ -93,19 +95,35 @@ const RsvpPanel = () => {
           Send your answer here so Gus gets a proper attendance notification without chasing
           everyone down.
         </p>
-        <div className="confirmed-list-card" aria-labelledby="confirmed-title">
-          <div className="confirmed-list-header">
-            <p className="panel-eyebrow">Confirmed Attendees</p>
-            <span className="status-badge">{confirmedAttendees.length} locked in</span>
+        <div className="attendance-columns" aria-labelledby="confirmed-title">
+          <div className="confirmed-list-card">
+            <div className="confirmed-list-header">
+              <p className="panel-eyebrow" id="confirmed-title">Confirmed Attendees</p>
+              <span className="status-badge">{confirmedAttendees.length} locked in</span>
+            </div>
+            <ul className="confirmed-list">
+              {confirmedAttendees.map((attendee) => (
+                <li key={attendee} className="confirmed-list-item">
+                  <span className="confirmed-bullet" aria-hidden="true" />
+                  <span>{attendee}</span>
+                </li>
+              ))}
+            </ul>
           </div>
-          <ul className="confirmed-list" id="confirmed-title">
-            {confirmedAttendees.map((attendee) => (
-              <li key={attendee} className="confirmed-list-item">
-                <span className="confirmed-bullet" aria-hidden="true" />
-                <span>{attendee}</span>
-              </li>
-            ))}
-          </ul>
+          <div className="confirmed-list-card confirmed-list-card-out" aria-labelledby="confirmed-out-title">
+            <div className="confirmed-list-header">
+              <p className="panel-eyebrow" id="confirmed-out-title">Confirmed Out</p>
+              <span className="status-badge">{confirmedOutAttendees.length} out</span>
+            </div>
+            <ul className="confirmed-list">
+              {confirmedOutAttendees.map((attendee) => (
+                <li key={attendee} className="confirmed-list-item">
+                  <span className="confirmed-bullet confirmed-bullet-out" aria-hidden="true" />
+                  <span>{attendee}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
         <div className="payment-card" aria-labelledby="payment-title">
           <div className="confirmed-list-header">
