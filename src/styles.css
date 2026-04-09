@@ -301,6 +301,11 @@ button {
   z-index: 1;
 }
 
+.rsvp-copy {
+  display: grid;
+  gap: 18px;
+}
+
 .rsvp-form {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -386,6 +391,50 @@ button {
 
 .rsvp-status-error {
   color: #ffb7aa;
+}
+
+.confirmed-list-card {
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+  border-radius: 20px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02)),
+    rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.confirmed-list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.confirmed-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.confirmed-list-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-main);
+  font-weight: 700;
+}
+
+.confirmed-bullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--success), #5d8e60);
+  box-shadow: 0 0 0 4px rgba(136, 187, 139, 0.12);
+  flex: 0 0 auto;
 }
 
 .must-do-title {

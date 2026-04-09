@@ -13,6 +13,17 @@ const initialForm = {
   otherDetails: '',
 };
 
+const confirmedAttendees = [
+  'The Buck',
+  'Gus F',
+  'Jon P',
+  'John P',
+  'Dustin B',
+  'Jeff B',
+  'Michael W',
+  'Allan W',
+];
+
 const RsvpPanel = () => {
   const [formData, setFormData] = useState(initialForm);
   const [status, setStatus] = useState({ type: 'idle', message: '' });
@@ -82,6 +93,20 @@ const RsvpPanel = () => {
           Send your answer here so Gus gets a proper attendance notification without chasing
           everyone down.
         </p>
+        <div className="confirmed-list-card" aria-labelledby="confirmed-title">
+          <div className="confirmed-list-header">
+            <p className="panel-eyebrow">Confirmed Attendees</p>
+            <span className="status-badge">{confirmedAttendees.length} locked in</span>
+          </div>
+          <ul className="confirmed-list" id="confirmed-title">
+            {confirmedAttendees.map((attendee) => (
+              <li key={attendee} className="confirmed-list-item">
+                <span className="confirmed-bullet" aria-hidden="true" />
+                <span>{attendee}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
       <form className="rsvp-form" onSubmit={handleSubmit}>
         <label className="rsvp-field">
