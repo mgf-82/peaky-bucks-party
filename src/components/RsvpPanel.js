@@ -16,6 +16,7 @@ const initialForm = {
 const confirmedAttendees = [
   'The Buck',
   'Gus F',
+  'Jaz P',
   'Jon P',
   'John P',
   'Dustin B',
@@ -96,12 +97,12 @@ const RsvpPanel = () => {
           everyone down.
         </p>
         <div className="attendance-columns" aria-labelledby="confirmed-title">
-          <div className="confirmed-list-card">
+          <div className="confirmed-list-card confirmed-list-card-in">
             <div className="confirmed-list-header">
               <p className="panel-eyebrow" id="confirmed-title">Confirmed Attendees</p>
               <span className="status-badge">{confirmedAttendees.length} locked in</span>
             </div>
-            <ul className="confirmed-list">
+            <ul className="confirmed-list confirmed-list-two-column">
               {confirmedAttendees.map((attendee) => (
                 <li key={attendee} className="confirmed-list-item">
                   <span className="confirmed-bullet" aria-hidden="true" />
@@ -115,7 +116,8 @@ const RsvpPanel = () => {
               <p className="panel-eyebrow" id="confirmed-out-title">Confirmed Out</p>
               <span className="status-badge">{confirmedOutAttendees.length} out</span>
             </div>
-            <ul className="confirmed-list">
+            <p className="confirmed-out-note">No dramas, noted and off the board for the day.</p>
+            <ul className="confirmed-list confirmed-list-out">
               {confirmedOutAttendees.map((attendee) => (
                 <li key={attendee} className="confirmed-list-item">
                   <span className="confirmed-bullet confirmed-bullet-out" aria-hidden="true" />
