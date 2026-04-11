@@ -15,6 +15,7 @@ const initialForm = {
 
 const confirmedAttendees = [
   'The Buck',
+  'Clint P',
   'Gus F',
   'Jaz P',
   'Jon P',
@@ -25,7 +26,7 @@ const confirmedAttendees = [
   'Allan W',
 ];
 
-const confirmedOutAttendees = ['Matt T'];
+const confirmedOutAttendees = ['Matt T', 'Simon W'];
 
 const RsvpPanel = () => {
   const [formData, setFormData] = useState(initialForm);
