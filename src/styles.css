@@ -287,7 +287,7 @@ button {
 
 .rsvp-card {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.82fr);
   gap: 22px;
   margin-bottom: 20px;
   padding: 24px 22px;
@@ -295,22 +295,53 @@ button {
   border-color: rgba(221, 180, 107, 0.34);
 }
 
+.rsvp-main,
+.rsvp-sidebar,
 .rsvp-copy,
 .rsvp-form {
   position: relative;
   z-index: 1;
 }
 
+.rsvp-main,
+.rsvp-sidebar {
+  display: grid;
+  align-content: start;
+  gap: 16px;
+}
+
 .rsvp-copy {
   display: grid;
-  gap: 18px;
+  gap: 12px;
 }
 
 .rsvp-form {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 14px;
   align-content: start;
+}
+
+.rsvp-form-card {
+  padding: 18px;
+  border-radius: 20px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02)),
+    rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.rsvp-form-title {
+  margin: 6px 0 0;
+  font-family: 'Cinzel', Georgia, serif;
+  color: var(--accent-strong);
+  font-size: 1.25rem;
+}
+
+.rsvp-form-copy {
+  margin: -4px 0 0;
+  color: var(--text-muted);
+  line-height: 1.6;
 }
 
 .rsvp-field,
@@ -393,12 +424,6 @@ button {
   color: #ffb7aa;
 }
 
-.attendance-columns {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-}
-
 .confirmed-list-card {
   display: grid;
   gap: 14px;
@@ -412,11 +437,17 @@ button {
 
 .confirmed-list-card-in {
   gap: 16px;
+  min-height: 100%;
 }
 
 .confirmed-list-card-out {
   border-color: rgba(207, 83, 56, 0.22);
   background: linear-gradient(180deg, rgba(34, 20, 18, 0.92), rgba(24, 16, 13, 0.88));
+}
+
+.rsvp-sidebar-panels {
+  display: grid;
+  gap: 14px;
 }
 
 .payment-card {
@@ -847,6 +878,10 @@ button {
   .rsvp-card {
     grid-template-columns: 1fr;
   }
+
+  .rsvp-sidebar-panels {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 720px) {
@@ -897,9 +932,9 @@ button {
   .style-guide,
   .flat-cap-links,
   .rsvp-form,
-  .attendance-columns,
   .payment-grid,
-  .confirmed-list-two-column {
+  .confirmed-list-two-column,
+  .rsvp-sidebar-panels {
     grid-template-columns: 1fr;
   }
 }

@@ -91,29 +91,36 @@ const RsvpPanel = () => {
 
   return (
     <section className="rsvp-card" id="rsvp" aria-labelledby="rsvp-title">
-      <div className="rsvp-copy">
-        <p className="closing-eyebrow">RSVP Ledger</p>
-        <h2 className="must-do-title" id="rsvp-title">Lock in your attendance.</h2>
-        <p className="must-do-text">
-          Send your answer here so Gus gets a proper attendance notification without chasing
-          everyone down.
-        </p>
-        <div className="attendance-columns" aria-labelledby="confirmed-title">
-          <div className="confirmed-list-card confirmed-list-card-in">
-            <div className="confirmed-list-header">
-              <p className="panel-eyebrow" id="confirmed-title">Confirmed Attendees</p>
-              <span className="status-badge">{confirmedAttendees.length} locked in</span>
-            </div>
-            <ul className="confirmed-list confirmed-list-two-column">
-              {confirmedAttendees.map((attendee) => (
-                <li key={attendee} className="confirmed-list-item">
-                  <span className="confirmed-bullet" aria-hidden="true" />
-                  <span>{attendee}</span>
-                </li>
-              ))}
-            </ul>
+      <div className="rsvp-main">
+        <div className="rsvp-copy">
+          <p className="closing-eyebrow">RSVP Ledger</p>
+          <h2 className="must-do-title" id="rsvp-title">Lock in your attendance.</h2>
+          <p className="must-do-text">
+            Send your answer here so Gus gets a proper attendance notification without chasing
+            everyone down.
+          </p>
+        </div>
+        <div className="confirmed-list-card confirmed-list-card-in" aria-labelledby="confirmed-title">
+          <div className="confirmed-list-header">
+            <p className="panel-eyebrow" id="confirmed-title">Confirmed Attendees</p>
+            <span className="status-badge">{confirmedAttendees.length} locked in</span>
           </div>
-          <div className="confirmed-list-card confirmed-list-card-out" aria-labelledby="confirmed-out-title">
+          <ul className="confirmed-list confirmed-list-two-column">
+            {confirmedAttendees.map((attendee) => (
+              <li key={attendee} className="confirmed-list-item">
+                <span className="confirmed-bullet" aria-hidden="true" />
+                <span>{attendee}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      <div className="rsvp-sidebar">
+        <div className="rsvp-sidebar-panels">
+          <div
+            className="confirmed-list-card confirmed-list-card-out"
+            aria-labelledby="confirmed-out-title"
+          >
             <div className="confirmed-list-header">
               <p className="panel-eyebrow" id="confirmed-out-title">Confirmed Out</p>
               <span className="status-badge">{confirmedOutAttendees.length} out</span>
@@ -128,25 +135,31 @@ const RsvpPanel = () => {
               ))}
             </ul>
           </div>
+          <div className="payment-card" aria-labelledby="payment-title">
+            <div className="confirmed-list-header">
+              <p className="panel-eyebrow" id="payment-title">Payment Details</p>
+              <span className="status-badge">$125.00 owed</span>
+            </div>
+            <div className="payment-grid">
+              <div className="payment-item">
+                <span className="rsvp-label">PAYID For Gus</span>
+                <strong>0404 292 668</strong>
+              </div>
+              <div className="payment-item">
+                <span className="rsvp-label">Total Owed</span>
+                <strong>$125.00</strong>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="payment-card" aria-labelledby="payment-title">
+        <form className="rsvp-form rsvp-form-card" onSubmit={handleSubmit}>
           <div className="confirmed-list-header">
-            <p className="panel-eyebrow" id="payment-title">Payment Details</p>
-            <span className="status-badge">$125.00 owed</span>
-          </div>
-          <div className="payment-grid">
-            <div className="payment-item">
-              <span className="rsvp-label">PAYID For Gus</span>
-              <strong>0404 292 668</strong>
-            </div>
-            <div className="payment-item">
-              <span className="rsvp-label">Total Owed</span>
-              <strong>$125.00</strong>
+            <div>
+              <p className="panel-eyebrow">Reply Here</p>
+              <h3 className="rsvp-form-title">Send Your Attendance</h3>
             </div>
           </div>
-        </div>
-      </div>
-      <form className="rsvp-form" onSubmit={handleSubmit}>
+          <p className="rsvp-form-copy">Quick answer, straight to Gus.</p>
         <label className="rsvp-field">
           <span className="rsvp-label">Name</span>
           <input
@@ -196,7 +209,8 @@ const RsvpPanel = () => {
             {status.message}
           </p>
         )}
-      </form>
+        </form>
+      </div>
     </section>
   );
 };
