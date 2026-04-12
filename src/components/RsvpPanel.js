@@ -15,6 +15,7 @@ const initialForm = {
 
 const confirmedAttendees = [
   'The Buck',
+  'Brenton G',
   'Clint P',
   'Gus F',
   'Jaz P',
