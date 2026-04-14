@@ -14,20 +14,24 @@ const initialForm = {
 };
 
 const confirmedAttendees = [
-  'The Buck',
-  'Brenton G',
-  'Clint P',
-  'Gus F',
-  'Jaz P',
-  'Jon P',
-  'John P',
-  'Dustin B',
-  'Jeff B',
-  'Michael W',
-  'Allan W',
+  { name: 'The Buck', hasPaid: true },
+  { name: 'Brenton G', hasPaid: true },
+  { name: 'Clint P', hasPaid: false },
+  { name: 'Gus F', hasPaid: true },
+  { name: 'Jaz P', hasPaid: false },
+  { name: 'Jon P', hasPaid: true },
+  { name: 'John P', hasPaid: true },
+  { name: 'Dustin B', hasPaid: true },
+  { name: 'Jeff B', hasPaid: true },
+  { name: 'Michael W', hasPaid: true },
+  { name: 'Allan W', hasPaid: true },
 ];
 
-const confirmedOutAttendees = ['Matt T', 'Simon W'];
+const confirmedOutAttendees = [
+  { name: 'Matthew', note: 'Maybe catching up with us later on.' },
+  { name: 'Simon W' },
+  { name: 'Nima', note: 'Out for the main run, in for bowls and the rest.' },
+];
 
 const RsvpPanel = () => {
   const [formData, setFormData] = useState(initialForm);
@@ -107,9 +111,14 @@ const RsvpPanel = () => {
           </div>
           <ul className="confirmed-list confirmed-list-two-column">
             {confirmedAttendees.map((attendee) => (
-              <li key={attendee} className="confirmed-list-item">
+              <li key={attendee.name} className="confirmed-list-item confirmed-list-item-in">
                 <span className="confirmed-bullet" aria-hidden="true" />
-                <span>{attendee}</span>
+                <span>{attendee.name}</span>
+                {attendee.hasPaid && (
+                  <span className="paid-tick" aria-label={`${attendee.name} has paid`}>
+                    Paid
+                  </span>
+                )}
               </li>
             ))}
           </ul>
@@ -128,9 +137,12 @@ const RsvpPanel = () => {
             <p className="confirmed-out-note">No dramas, noted and off the board for the day.</p>
             <ul className="confirmed-list confirmed-list-out">
               {confirmedOutAttendees.map((attendee) => (
-                <li key={attendee} className="confirmed-list-item">
+                <li key={attendee.name} className="confirmed-list-item confirmed-list-item-out">
                   <span className="confirmed-bullet confirmed-bullet-out" aria-hidden="true" />
-                  <span>{attendee}</span>
+                  <div className="confirmed-list-copy">
+                    <span>{attendee.name}</span>
+                    {attendee.note && <span className="confirmed-list-note">{attendee.note}</span>}
+                  </div>
                 </li>
               ))}
             </ul>
